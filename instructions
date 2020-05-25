@@ -1,0 +1,18 @@
+download file from google drive using terminal (wget)
+
+1. right click on the file to get a shareable link
+
+#example of a shareable link
+ https://drive.google.com/open?id=1Hj3j8QWVCiEIET1pgVaErB2TDyjccQYD
+
+2. note the id param 1Hj3j8QWVCiEIET1pgVaErB2TDyjccQYD
+    
+3. in the command below which you will later paste to terminal replace ID with the value you noted above
+
+4. after -O is where you specify with what name the file should be saved. in this case I have given the file the name
+    pictures.zip .. change it accordingly.
+
+5. paste the command on the terminal after all the replacement.
+6. watch the progress bar :-)
+
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=ID' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=ID" -O pictures.zip && rm -rf /tmp/cookies.txt
