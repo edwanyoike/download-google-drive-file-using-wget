@@ -7,7 +7,7 @@ download file from google drive using terminal (wget)
 
 2. note the id param 1Hj3j8QWVCiEIET1pgVaErB2TDyjccQYD
     
-3. in the command below which you will later paste to terminal replace ID with the value you noted above
+3. in the command below (after instruction 6) which you will later paste to terminal replace ID with the value you noted above
 
 4. after -O is where you specify with what name the file should be saved. in this case I have given the file the name
     pictures.zip .. change it accordingly.
